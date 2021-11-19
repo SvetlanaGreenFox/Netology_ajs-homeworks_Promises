@@ -3,6 +3,6 @@ import read from './reader';
 
 export default class GameSavingLoader {
   static load() {
-    return read().then((data) => json(data));
+    return read().then((data) => json(data)).then((data) => JSON.parse(data));
   }
 }
